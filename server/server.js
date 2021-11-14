@@ -4,6 +4,8 @@ let app = module.exports = require('express')();
 let bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+const buildPath = path.join(__dirname, '..', 'build');
+app.use(express.static(buildPath));
 let cors = require('cors');
 app.use(cors());
 

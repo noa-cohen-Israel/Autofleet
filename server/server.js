@@ -22,4 +22,5 @@ app.use(function (req, res) {
 });
 
 app.listen(port, () => {
+   console.log(`Express is working on port ${port}`)
 });
